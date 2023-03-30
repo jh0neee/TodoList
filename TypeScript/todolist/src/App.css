@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin: 0 auto;
+}
+
+#container{
+  display: flex;
+  flex-direction: row; /* 행(가로)방향 정렬*/
+  justify-content: center; /* 메인 축 정렬*/
+  align-items: center;
+  background-color: #FFE85D;
+  height: 100vh;
+}
+
+#wrap {
+  background-color: transparent;
+  width: 430px;
+  text-align: center; /* wrap 내의 요소 center정렬 */
+}
+
+#title{
+  background-color: transparent;
+  font-size: 50px;
+  color: #6a4bae; /* 글자 색상 */
+  padding: 10px;
+}
+#todo-list {
+  display: flex;
+  flex-direction: column; /* 열(세로)방향 정렬*/
+  align-items: center; /* 수직 축 정렬*/
+  width: 100%;
+  height: auto;
+  position: relative;
+  min-height: 360px;
+  /* border: 2px solid #6a4bae; 테두리 */
+  padding-bottom: 8px;
+}
+
+input{
+  text-align: center;
+}
+
+#todo-list li {
+  width: 80%;
+  background: rgba(255, 255, 255, 0.4);
+  margin-top: 8px;
+  margin-left: 20px;
+  padding: 15px;
+  overflow: hidden;
+  font-weight: 400;
+  color: #6a4bae;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#todo-list li span {
+  display: inline-block;
+  min-width: 240px;
+}
+
+#todo-list li.completed span {
+  color: gray;
+  text-decoration: line-through; /* 취소선 */
+}
+
+#todo-list li button {
+  background: transparent;
+  border: none;
+  color:lightgray;
+}
+
+#todo-list li button:hover {
+  color: black;
+}
+
+input[type="checkbox"] { /* 체크박스 */
+  appearance: none;
+  background: #FFE85D;
+  margin-top: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 16px;
+  outline: 0;
+  width: 16px;
+}
+
+input[type="checkbox"]::after { /* 체크표시 */
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  content: '';
+  display: none;
+  height: 40%;
+  left: 35%;
+  position: relative;
+  top: 20%;
+  transform: rotate(45deg);
+  width: 15%;
+}
+
+input[type="checkbox"]:checked {
+  background: #6a4bae;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+#create {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+#create input {
+  margin-left: 65px;
+  padding: 10px 0 10px 10px;
+  width: 250px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #6a4bae;
+}
+
+#create input:focus {
+  outline: none;
+}
+
+#btn{
+  background-color: transparent;
+  border: none;
+  color: #6a4bae;
+  font-size: 20px;
+}
+
+
